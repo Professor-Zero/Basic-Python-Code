@@ -4,6 +4,7 @@
 
 import sklearn
 from sklearn import tree
+
 #holds information of different vehicles about their features
 #each box holds weight of vehicle, number of wheels, highest speed.
 #       #pounds, #wheels, #speedlimit
@@ -15,7 +16,7 @@ labels =    ["Truck",            "Car",     "Motorcycle"]
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
 
-#now the machine trys and predicts with I data I give it and determs what kind of car it is.
+#now the machine trys and predicts with the data I give it and determines what kind of vehicle it is.
 print('If the vehicle weights 3500lb, has 4 wheels, and 80 mph.')
 print('The computer predicts it\'s a',classifier.predict([[3500, 4, 80]]))
 
